@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="h-100" style="">
+  <head>
+    <title>Teazers-Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+
+    <script charset="utf-8"
+        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+        type="text/javascript">
+    </script>
+
+  </head>
+  <body
+    class="loginBgUp h-100"
+    style="font-family: 'poppins', sans-serif !important; font-weight: 400"
+  >
+    <nav class="navbar navbar-expand-md navbar-dark navbarHide">
+      <a class="navbar-brand" href="index.html">
+        <img src="./images/logo.png" height="40px" alt="Teazers logo"
+      /></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">E no concern you!</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid loginBg mt-4 mt-sm-0 mt-lg-0 h-100">
+      <div class="row h-100 justify-content-center">
+        <!-- 	for desktop -->
+        <div class="col-sm-4 desktopProp hideD" style="">
+          <img src="Image/indexbg.png" alt="coin image" class="img-fluid" />
+        </div>
+
+        <div class="col-12 jovi col-sm-8 col-lg-8 mx-auto mx-sm-0" style="">
+          <div class="row mt-2 bg-white pt-3 pb-5 hideD" style="">
+            <div class="col-12 clearfix">
+              <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" height="70px" alt="Teazers logo"
+              /></a>
+              <a class="navbar-brand float-right" href="#">
+                <img
+                  src="https://res.cloudinary.com/chidiebere/image/upload/v1602605578/eng.png"
+                  alt="Teazers logo"
+              /></a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-lg shadow-lg pb-4 bg-white sign col-12 col-md-8 col-lg-6 ml-sm-auto mr-sm-4 mr-lg-5"
+          >
+            <div class="row">
+              <div class="col-6 text-center p-3">SIGN IN</div>
+              <div
+                id="register"
+                class="col-6 text-center p-3"
+                style="background: #f5faff"
+              >
+                REGISTER
+              </div>
+            </div>
+
+            <div class="col-12 px-4">
+              <h5
+                class="mt-5 mb-4 access"
+                style="font-weight: 500; font-style: normal"
+              >
+                Access your personal account
+              </h5>
+              <div class="row">
+                <button
+                  class="text-white btn col-12 mx-auto mb-4"
+                  style="background: #9d60ab"
+                >
+                  Authorized Login
+                </button>
+              </div>
+              <div class="row">
+                <hr
+                  class="w-25"
+                  style="border: 1px solid #ebebeb; background: #ebebeb"
+                />
+                <div class="text-center">OR</div>
+                <hr
+                  class="w-25"
+                  style="border: 1px solid #ebebeb; background: #ebebeb"
+                />
+              </div>
+              <h5 style="font-weight: 500" class="access">View an account</h5>
+              <form action="" method="" onsubmit="submitDataToviewAccount(); return false">
+                <div class="form-group">
+                  <input
+                    class="form-control col-12 mx-auto f"
+                    type="text"
+                    placeholder=" Enter an ID or Trx Address"
+                    id = "id-or-address"
+                  />
+                </div>
+                <div class="row">
+                  <button
+                    type="submit"
+                    class="btn text-white col-12 mx-auto"
+                    style="background: #ba0406"
+                  >
+                    SIGN IN
+                  </button>
+                </div>
+                <br />
+                <div
+                  class="text-center f"
+                  style="font-family: font-family: 'Roboto', sans-serif; color: #5E5D5D"
+                >
+                  Telegram channel: @teazers
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- for registration -->
+
+          <div
+            class="rounded-lg shadow-lg pb-4 bg-white reg col-12 col-md-8 col-lg-6 ml-auto mr-sm-4 mr-lg-5"
+          >
+            <div class="row">
+              <div
+                class="col-6 text-center p-3"
+                id="signin"
+                style="background: #f5faff"
+              >
+                SIGN IN
+              </div>
+              <div class="col-6 text-center p-3">REGISTER</div>
+            </div>
+            <div class="col-12 px-4">
+              <h5
+                class="mt-5 text-center creat"
+                style="font-weight: 500; font-style: normal"
+              >
+                Create your account
+              </h5>
+              <p
+                class="text-center f"
+                style="font-family: 'Roboto', sans-serif"
+              >
+                To continue, enter your upline ID or your Trx Address
+              </p>
+              <form action="" method="" onsubmit="RegisterHandler(); return false">
+                <div class="form-group">
+                  <input
+                    class="form-control col-12 mx-auto f"
+                    type="text"
+                    placeholder=" Enter upliner ID "
+                    id = "register-input"
+                  />
+                </div>
+                <div class="row">
+                  <button
+                    type = "submit"
+                    class="btn text-white col-12 mx-auto"
+                    style="background: #ba0406"
+                  >
+                    SIGN IN
+                  </button>
+                </div>
+                <br />
+                <div
+                  class="text-center f"
+                  style="font-family: font-family: 'Roboto', sans-serif; color: #5E5D5D"
+                >
+                  Telegram channel: @teazers
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/javscript.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+
+
+      // globals
+
+      let web3;
+      let accounts;
+
+      // web3 = new Web3(Web3.currentProvider);
+      const contractAddress = "0xFA2E09ba28fb58e97a1ab9f8a39c8Ba425474F4f";
+      const contractABI = [{"constant":false,"inputs":[],"name":"changeContractStatus","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_sponsor","type":"address"}],"name":"registration","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"members","outputs":[{"name":"id","type":"uint256"},{"name":"sponsor","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_matrix","type":"uint256"},{"name":"_level","type":"uint256"}],"name":"purchaseLevel","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"orderId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"memberId","type":"uint32"}],"name":"getAffiliateWallet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"},{"name":"_sponsor","type":"address"},{"name":"_level","type":"uint256"}],"name":"setupAccount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"contractEnabled","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getAffiliateId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"idToMember","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_level","type":"uint256"},{"name":"_levelPrice","type":"uint256"},{"name":"_levelCommission","type":"uint256"},{"name":"_levelFee","type":"uint256"}],"name":"updateLevelCost","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_level","type":"uint256"}],"name":"purchaseBundle","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_levelPrice","type":"uint256"},{"name":"_levelCommission","type":"uint256"},{"name":"_levelFee","type":"uint256"}],"name":"addLevel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"topLevel","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_memberId","type":"uint256"},{"name":"_addr","type":"address"},{"name":"_sponsor","type":"address"},{"name":"_level","type":"uint256"}],"name":"importAccount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"levelCost","outputs":[{"name":"cost","type":"uint256"},{"name":"commission","type":"uint256"},{"name":"fee","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setFeeSystem","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"handleForfeitedBalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"lastId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"},{"name":"_matrix","type":"uint256"},{"name":"_level","type":"uint256"}],"name":"compLevel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setHolder","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_addr","type":"address"},{"name":"_holder","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"memberId","type":"uint256"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Registration","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Upgrade","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"placement","type":"uint8"},{"indexed":false,"name":"passup","type":"bool"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementT1","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"placedUnder","type":"address"},{"indexed":false,"name":"placementSide","type":"uint8"},{"indexed":false,"name":"passup","type":"bool"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementT2","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"fromPosition","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Cycle","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"reEntryFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementReEntry","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"payoutFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"FundsPayout","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"passupFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"FundsPassup","type":"event"}];
+      // const trezzorroContract = new web3.eth.Contract(contractABI, contractAddress);
+      // console.log("this is what we need: ", trezzorroContract)
+
+
+      // using ethers
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      const signer = provider.getSigner()
+      const trezzorroContract = new ethers.Contract(contractAddress, contractABI, signer);
+
+      // function for requesting connection to metamask
+      const connectWallet = async () => {
+          let web3;
+          // Check if browser is running Metamask
+          if(window.ethereum) {
+              web3 = new Web3(window.ethereum);
+          }
+          else if (window.web3) {
+              web3 = new Web3(window.web3.currentProvider);
+          }
+
+          await window.ethereum.request({ method: 'eth_requestAccounts' });    
+          accounts = await web3.eth.getAccounts()
+
+          // get user balance
+          if(accounts[0]) {
+              const bal = await web3.eth.getBalance(accounts[0])
+              const convertedBal = await web3.utils.fromWei(bal).toString()
+              console.log("address", accounts[0])
+              console.log("balance", convertedBal)
+              
+          }
+        }
+
+      // when page finally loads
+      window.onload = async () => {
+        if (typeof web3 !== 'undefined') {
+           web3 = new Web3(Web3.currentProvider);
+        } else {
+           // set the provider you want from Web3.providers
+           web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+        };
+        console.log("injected",web3)
+        web3.eth.defaultAccount = await web3.eth.accounts[0];
+        
+        if(web3.eth.defaultAccount === null) {
+          // the user is not connected.
+          // ask the user to connect
+          connectWallet();
+        
+        }
+
+        }
+        // handler to view any user account
+        const submitDataToviewAccount = async () => {
+
+          const inputedValue = document.querySelector("#id-or-address").value;
+          // do nothing if nothing is entered
+          if(inputedValue.length === 0) return
+
+          if(inputedValue.indexOf("0x") === 0) {
+            // definately not an id but an address
+            // check if the address entered is in correct format
+
+            // const convertToAddress = ethers.utils.getAddress(inputedValue)
+            // console.log(convertToAddress);
+            const getMembers = await trezzorroContract.members(inputedValue)
+            localStorage.setItem("viewAccountID", getMembers.id.toString())
+            localStorage.setItem("viewAccountAddress", inputedValue)
+            
+            window.location.href = "/dashboard";
+            console.log(getMembers)
+            
+          } else {
+            // an id
+            const userAddress = await trezzorroContract.getAffiliateWallet(Number(inputedValue));
+            if(userAddress !== "0x0000000000000000000000000000000000000000") {
+              localStorage.setItem("viewAccountID", inputedValue)
+              localStorage.setItem("viewAccountAddress", userAddress)
+
+              window.location.href = "/dashboard";
+            }
+            
+          }
+        }
+      
+        // handler to register user
+        const RegisterHandler = async () => {
+          // const accounts = await web3.eth.getAccounts();
+          const getUserAddress = await signer.getAddress();
+          console.log("this is the signer: ", getUserAddress)
+          const inputedID = document.querySelector("#register-input").value;
+          const amountIn = 0.02;
+
+          // do nothing if nothing is entered
+          if(inputedID.length === 0) return;
+
+          // get the address coresponding to the id the user supplied
+          const uplineAddress = await trezzorroContract.getAffiliateWallet(Number(inputedID));
+          console.log("we are getting there", getUserAddress, uplineAddress)
+         
+          await trezzorroContract.registration(
+            uplineAddress,
+            {
+            //   from: getUserAddress,
+              value: ethers.utils.parseEther('0.02'),
+            //   gasLimit: 1500000,
+            //   gasPrice: ethers.utils.parseUnits('20', 'gwei'),
+            }
+          )
+        }
+      
+      </script>
+  </body>
+</html>

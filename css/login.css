@@ -1,0 +1,110 @@
+
+/*mobile first approach*/
+
+.navbar {
+	background: #000000!important;
+  
+}
+.loginBgUp {
+	background-image: url(../Image/bg2.png) ;
+  	background-position: top right;
+  	background-repeat: no-repeat;
+    background-size: 300px;
+  
+}
+
+.loginBg {
+	background-image: url(../Image/loginbg.png);
+  	background-position: left bottom;
+  	background-repeat: no-repeat;
+    background-size: auto;
+    height: 550px;
+}
+
+.sign, .reg {
+	margin-top: 2em;
+}
+.reg{
+	display: none;
+}
+.col-12, .jovi {
+  flex: 0 0 90%!important;
+}
+
+.hideD {
+  display: none;
+}
+@media (max-width: 376px) {
+  .access {
+    font-size:.7em;
+  }
+  .creat {
+    font-size: 1em;
+  }
+
+  .f {
+    font-size:.7em;
+  }
+  .to-cont {
+    font-size:.7em;
+  } 
+}
+/*for desktop*/
+@media  (min-width:768px) {
+.hideD {
+  display: flex;
+}
+  .navbar {
+  background: white!important;
+
+}
+.loginBg {
+  background-image: none;
+ 
+}
+.desktopProp {
+     background:#081731;
+   
+}
+.desktopProp > img {
+  width:320px;
+  height: 360px;
+   margin-left: 9em;
+    margin-top: 10em;
+  
+}
+
+.navbar {
+  display: none;
+}
+.sign, .reg {
+  margin-top: 0em;
+}
+
+}
+
+@media (min-width:992px) {
+
+.desktopProp > img {
+  width:420px;
+  height: 520px;
+  margin-left: 9em;
+  margin-top: 10em;
+
+}
+
+
+}
+
+
+@media (min-width:1440px) {
+
+.desktopProp > img {
+  width:420px;
+  height: 520px;
+  margin-left: 18em;
+  margin-top: 6em;
+  position: relative;
+  z-index:1;
+
+}

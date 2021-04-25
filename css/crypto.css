@@ -1,0 +1,651 @@
+/* all css styles */
+
+/* for debugging */
+
+
+.bord-r{
+border: 3px solid #D32027;
+}
+
+.bord-g{
+	border: 3px solid green;
+}
+.navbar-dark{
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(0, 0, 0, 0) 88.57%) !important;
+}
+
+a:hover{
+	text-decoration: none!important;
+}
+.btn-outline-dark:hover { 
+
+background: grey;
+color:white;
+
+}
+
+
+.navbar {
+/* 	position: relative; */
+}
+
+.header-image{
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(0, 0, 0, 0) 88.57%), url(../images/rectangle.png);
+/* position: absolute; */
+background-repeat: no-repeat !important;
+background-size: cover!important;
+/* background-position: left top; */
+ margin-top: -5em;
+height: 100%;
+/* width: 100%; */
+
+}
+
+
+.h{
+	background-color: red;
+}
+
+.h-txt-col {
+
+	color: #FFFFFF;
+	font-size: 32px;
+
+	margin-top: 5em;
+	margin-bottom:  4em;
+
+}
+
+.h-txt-col.mb-auto {
+	margin-bottom:  2em!important;
+}
+.h-txt-col > span {
+	color: #FFA903;
+	
+		margin-top: 1em;
+		display: block;
+}
+
+.coin-h{
+	width:200px;
+	height: 200px;
+}
+
+
+/* .comp-2{
+	padding: 4em;
+}
+ */
+.vid-text > h5 {
+	font-size: 32px;
+}
+
+.vid-text > p {
+	
+	font-size: 1.1rem;
+	line-height: 165%;
+	color:  #5E5D5D;
+}
+
+
+.why-choose-us-h > h3 {
+
+font-weight: 500;
+font-size: 21px;
+margin-top: 0px;
+
+}
+
+.card-with-people {
+	width: 97%;
+}
+.comp-3{
+	background-color: #F8F4F4;
+}
+.comp-3 > h1 {
+	color: #000000;
+font-weight: 500;
+
+}
+
+.flat-coin-bgimage {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(27, 27, 27, 0.24) 67.92%), url(../images/flatcoin.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: left top; */
+	height: 100%;
+}
+.comp4-txt{
+	margin-top: 5em;
+	margin-bottom: 2em;
+	font-size: 22px;
+}
+.comp4-btnR{
+	margin-right: 6em;
+}
+.comp5 {
+	background:#F5FAFF;
+}
+
+.comp5 > .col > .num {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.comp5 > .col > .wd {
+	font-size: 20px;
+
+}
+.compSub5-h{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-weight: 500;
+	font-size: 30px;
+}
+.compSub5-2col > .wallet-cont, .arrowWallet-cont {
+	font-size: 17px;
+	font-weight: 500;
+	text-align: justify;
+	color:  #5E5D5D;
+	text-align: justify;
+
+
+}
+
+.comp6-Image  {
+	background:  url(../images/handAndCoin.png);
+	background-repeat:  no-repeat;
+	background-size: cover;
+	height: auto;
+
+}
+
+.comp6-Image > h4 {
+	font-size: 23px;
+	color: white;
+	font-style: normal;
+	vertical-align: center;
+}
+
+.comp6-Image > h4 > span {
+	font-weight: 470;
+}
+.comp6-h {
+	font-size: 30px;
+	margin-top:6em;
+	margin-bottom:4em; 
+}
+
+.for-txt {
+	line-height: 33px;
+	color: #5E5D5D;
+	font-size: 18px;
+	
+}
+.for-txt > .col > b {
+	color: #000000;
+	font-weight: 600;
+}
+.ethCard {
+		background: rgba(242, 245, 250, 0.9) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: left top; */
+	/* height: 40em; */
+}
+
+.sec-card::after{
+		box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.7); 
+}
+.happyUsers{
+	font-size: 40px;
+}
+
+.happyUsers-results {
+	color: #5E5D5D;
+	font-size: 24px;
+}
+.happyUsers-results > hr {
+
+	border: 2px solid #FFA903; 
+	width:12em;
+}
+
+
+.cardfortext > .h1{
+	font-size: 17px;
+font-weight: 560;
+}
+
+.cardfortext > .txt {
+	font-size: 25px;
+	color: #D32027;
+	font-weight: 600;
+}
+.shad {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.comp7{
+	background: rgba(242, 245, 250, 0.9) ;
+	background-repeat: no-repeat;
+	background-size : cover;
+}
+.comp7-HandT {
+	/* margin-bottom: 8em; */
+}
+.comp7-h {
+	font-size: 40px;
+	font-weight: normal;
+}
+.comp7-hTxt {
+	color: #5E5D5D;
+	font-size: 24px;
+}
+.Comp7-col{
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 /*  padding: 2em; */
+
+}
+.col-sm-3.Comp7-col {
+	flex: 0 0 23%;
+
+}
+
+.card-txt > .package {
+
+		font-weight: 600;
+		font-size: 24px;
+		display: block;
+		margin-top: 1em;
+}
+
+.card-txt > .eth {
+
+		font-weight: 600;
+		font-size: 25px;
+	
+}
+
+.card-txt > .Minimum  {
+		font-size: 13px;
+
+}
+
+.card-txt > .numEth {
+		font-size: 20px;
+		color: #FFA903;
+		font-weight: 600;
+}
+
+.card-txt > .Xnum {
+		font-size: 16px;
+		color: #D32027;
+		font-weight: 600;
+}
+
+.faqAns{
+	background: #FBFBFB;
+	
+	position: relative;
+	/* z-index: -1; */
+	margin-top: -0.4em;
+
+}
+
+.shadFaqs{
+box-shadow:0px 7px 1rem 2px rgba(0,0,0,.175);
+background: #E5E5E5;
+}
+/* .faqQ { */
+/* 	border-bottom: 1.8px solid #f3f6fa;  *//* nonsesne */
+/* } */
+
+.que.clearfix {
+	box-shadow:0px 11px 11px -5px  #EFEFEF;
+	
+}
+.que {
+	box-shadow:0px 11px 11px -5px  #EFEFEF;
+	/*  border-top:4.4px solid #fbfbfb; */
+}
+
+.que > b {
+	font-size: 19px;
+	font-weight: 500;
+
+}
+
+
+.que.rounded {
+	margin-bottom: 0.1em!important;
+}
+.footer {
+	background-color: #000000;
+}
+
+
+
+
+.hp{
+
+background: #FBFBFB;
+	
+	position: relative;
+	z-index: -1;
+	margin-top: -0.4em;
+
+}
+
+ /* header to disapppear buttons */
+.btn-h-disappear {
+	display: none;
+}
+
+.d-btn{
+	 width:400px;
+	 font-size: 26px;
+}
+
+ .mobile-menuu {
+ 	display: none;
+ }
+.col-sm-12.shadFaqs  {
+
+	max-width: 100%;
+	flex: 0 0 96.3%;
+
+}
+
+.compSub5-hT-m {
+	display: none;
+}
+
+.compSub5-hT {
+	display: block;
+}
+
+.cd{
+	overflow-x: scroll;
+	overflow-y: hidden;
+
+	width: 100%;
+	height: 100%;
+
+}
+.cd::-webkit-scrollbar {
+  display: visible;
+}
+
+
+
+/* for smaller devices */
+
+@media only screen and (max-width: 600px) {
+
+ /* header to apppear buttons */
+ .header-image{
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(0, 0, 0, 0) 88.57%), url(../images/rectangle.png);
+/* position: absolute; */
+background-repeat: no-repeat !important;
+background-size: cover!important;
+/* background-position: left top; */
+ margin-top: -5em;
+height: 100%;
+/* width: 100%; */
+
+}
+
+.h-txt-col.mb-auto {
+	margin-bottom:  0em!important;
+}
+.btn-h-disappear {
+	display: block;
+}
+.vid-text {
+	font-size: 15px;
+	
+}
+.vid-text > h5 {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	font-size: 20px;
+	
+}
+
+.vid-text > p {
+	
+	font-size: 1rem;
+	line-height: 165%;
+}
+
+.comp-3 > h1 {
+color: #000000;
+font-weight: 500;
+font-size: 20px;
+line-height: 33px;
+}
+
+.why-choose-us-h > h3 {
+
+font-weight: 500;
+font-size: 16.5px;
+margin-top: 8px;
+
+}
+.why-choose-us-h {
+
+font-size: 15px;
+}
+
+.card-with-people {
+	width: 100%;
+}
+
+.why-ethereum > h3 {
+	font-size: 20px;
+
+}
+.why-ethereum {
+	font-size: 1rem;
+	line-height: 165%;
+}
+.why-ethereum  > p {
+	color: #C8C4C4;
+	padding-bottom: 13px; 
+}
+.comp6-Image  {
+	background:  url(../images/handAndCoin.png);
+	background-repeat:  no-repeat;
+	background-size: 100% 100%;
+	background-position: left bottom;
+	height: auto;
+
+}
+.comp6-h {
+	font-size: 30px;
+	margin-top:3em;
+	margin-bottom: 3em;
+}
+.comp4-btnR{
+	margin-right: auto;
+}
+
+.flat-coin-bgimage {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(27, 27, 27, 0.24) 67.92%), url(../images/flatcoin.png);
+	background-repeat: no-repeat;
+/* 	background-size: cover; */
+	background-position: right top;
+	background-size: 920px 680px;
+	height: auto;
+}
+
+.comp4-txt{
+	margin-top: 2.8em;
+	margin-bottom: 2em;
+	font-size: 19px;
+
+}
+
+.happyUsers{
+	font-size: 28px;
+}
+.happyUsers-results {
+	color: #5E5D5D;
+	font-size: 1rem;
+}
+
+.happyUsers-results > hr {
+
+	border: 1px solid #FFA903; 
+	width:12em;
+}
+
+.comp5 > .col > .num {
+
+	font-weight: 500;
+font-size: 27px;
+}
+.comp5 > .col > .wd {
+
+font-size: 17px;
+line-height: 19px;
+color:#868585;
+}
+
+.compSub5-h{
+	font-weight: 600;
+	font-size: 20px;
+
+}
+
+.w-75{
+	width: 100% !important;
+}
+
+.c{
+	overflow-x: scroll;
+	overflow-y: hidden;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+.c{
+	overflow-x: scroll;
+
+	width: 100%;
+	height: 100%;
+
+}
+.c::-webkit-scrollbar {
+  display: none;
+}
+
+.cardfortext > .h1{
+	font-size: 10px;
+	font-weight: 560;
+}
+
+.pay-txt {
+	font-size: 1rem;
+}
+
+.comp7-h {
+	font-size: 20px;
+	font-weight: 500;
+}
+.comp7-hTxt {
+	color: #5E5D5D;
+	font-size: 1rem;
+}
+
+.faq-h > h1{
+	font-size: 23px;
+}
+
+.col-sm-3.Comp7-col {
+	flex: 0 0 66.666667%;
+	
+}
+.flat-coin-bgimage {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 24.31%, rgba(27, 27, 27, 0.24) 67.92%), url(../images/flatcoin.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: left top; */
+	height: 100%;
+}
+
+
+
+/* .arrowToUp{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+	transition: all 4s;
+} 
+ */
+ .mobile-menuu {
+ 	display: none;
+ }
+/* 
+ .showForMobile {
+ 	display: flex;
+ } */
+ .mobile-menuu {
+
+	position: absolute;
+	top: 0;
+ 	right: 0;
+ 	z-index: 1;
+ 	background-color: #000000eb!important; 
+ 	width:45.8%; 
+ 	height:35em;
+
+	
+}
+.h-txt-col {
+	margin-top: 4.3em;
+ font-size: 20px;
+}
+.h-txt-col > span {
+	color: #FFA903;
+	font-size: 18px;
+	
+
+}
+
+.coin-h{
+	width:120px;
+	height: auto;
+}
+
+.que > b {
+	font-size: 15px;
+	font-weight: 500;
+
+}
+
+.que.rounded {
+	margin-bottom: 0.1em!important;
+}
+.why-choose {
+	font-size:18px;
+}
+.d-btn{
+	width:200px;
+	font-size: 16px;
+}
+
+/*  hide texers x4 on small screens */
+.compSub5-hT {
+	display: none;
+
+}
+
+.compSub5-hT-m {
+	display: block;
+}
+
+}
+

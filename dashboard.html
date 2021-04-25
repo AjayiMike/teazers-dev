@@ -1,0 +1,4328 @@
+<!DOCTYPE html>
+<html class="h-100">
+  <head>
+    <title>Teazers-Dashboard</title>
+    <meta charset="utf-8" />
+    <!---just incase you changed your mind tomorrow...from that kind of large mobile display, uncomment this code below from there.. I mean remove the dash and arrow characters before and after "meta name..." -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">  #endSars  -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+    <!-- <script src="node_modules/ethers/dist/ethers.esm.js"></script> -->
+
+    <script charset="utf-8"
+        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+        type="text/javascript">
+    </script>
+
+  </head>
+  <body style="position: relative">
+    <nav class="navbar navbar-expand-lg navbar-dark navbarHide">
+      <a class="navbar-brand" href="index.html">
+        <img src="./images/logo.png" alt="Teazers logo"
+      /></a>
+      <button class="navbar-toggler" id="mMenu" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse"></div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row flex-row-reverse flex-lg-row">
+        <!-- MOBILE MENU COLUMN -->
+        <div
+          class="col-3 hideMobile mobileMenuHeight toallowHrDivider"
+          id="mobileMenu"
+          style="z-index: 1000"
+        >
+          <div class="row mobileMenuClass mr-0" id="mobileMenu" style="">
+            <div class="dashboard-menu col-12 px-3">
+              <div class="media mt-2 ml-3">
+                <img
+                  src="Image/rounder.png "
+                  class="align-self-center mr-4 rounded-lg rounded-circle"
+                  style="width: 60px"
+                />
+                <div class="media-body text-white">
+                  <div class="mt-3 userTextDashMenu">
+                    <!-- <p></p>ID: </p><h1 id='idNumber'></p> -->
+                      <p id="idNumber"></p>
+                    <p>
+                      Referals:
+                      <span style="color: #e31127" class="ml-3"> 4 </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- for the button -->
+
+              <div class="red-btn text-white mt-3 mt-md-3">
+                <a href="dashboard1.html" class="d-link"
+                  ><button
+                    class="btn btnD btnAct text-white d-block mx-auto font w-100 text-justify p-3 rounded-lg"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/chidiebere/image/upload/v1604056670/t.svg"
+                      class="img-fluid mr-4 mt-n1"
+                      alt="red-btn-image"
+                      width="20px"
+                      height="20px"
+                    />
+                    Dashboard
+                  </button>
+                </a>
+              </div>
+              <div class="red-btn text-white mt-3 mt-md-3">
+                <a href="table.html" class="d-link"
+                  ><button
+                    class="btn btnD text-white d-block mx-auto font w-100 text-justify p-3 rounded-lg"
+                  >
+                    <img
+                      src="Image/AirPods.png "
+                      class="img-fluid mr-4"
+                      alt="red-btn-image"
+                      width="20px"
+                      height="20px"
+                    />
+                    Information
+                  </button>
+                </a>
+              </div>
+              <div class="red-btn text-white mt-3 mt-md-3">
+                <a href="" class="d-link"
+                  ><button
+                    class="btn btnD text-white d-block mx-auto font w-100 text-justify p-3 rounded-lg"
+                    style=""
+                  >
+                    <img
+                      src="Image/england.png "
+                      class="img-fluid mr-4"
+                      alt="red-btn-image"
+                      width="20px"
+                      height="20px"
+                    />
+                    Languauge
+                  </button>
+                </a>
+              </div>
+
+              <div class="red-btn text-white mt-3 mt-md-3">
+                <a href="" class="d-link"
+                  ><button
+                    class="btn btnD text-white d-block mx-auto font w-100 text-justify p-3 rounded-lg"
+                    style=""
+                  >
+                    <img
+                      src="Image/power.png  "
+                      class="img-fluid mr-4"
+                      alt="red-btn-image"
+                      width="20px"
+                      height="20px"
+                    />
+                    Logout
+                  </button>
+                </a>
+              </div>
+
+              <!-- end for the button -->
+
+              <!-- text after btn-->
+
+              <div class="mt-3" style="color: #b7b6b6">Total members</div>
+              <p class="text-white" style="font-size: 22px">223,667,122</p>
+
+              <div class="" style="color: #b7b6b6">New members</div>
+              <p class="text-white" style="font-size: 22px">223,667,122</p>
+
+              <div class="" style="color: #b7b6b6">Total Trx Earned</div>
+              <p class="text-white" style="font-size: 22px">223,667,122 Trx</p>
+              <!--- end of text before-->
+
+              <!-- the form -->
+
+              <div class="col formOnecoin pt-4 pb-3 rounded-lg mb-4 clearfix">
+                <label class="text-white">Your Tron Address:</label>
+                <div class="form-group">
+                  <input
+                    type=""
+                    name=""
+                    class="form-control"
+                    placeholder=" HSGSJMDNSHDNDKK98777DKDU... "
+                  />
+                </div>
+
+                <button class="btn float-right">Copy</button>
+                <button class="btn float-right mr-3">Scan</button>
+              </div>
+              <!-- second formcoin -->
+              <div class="col formOnecoin pt-4 pb-3 rounded-lg mb-5 clearfix">
+                <label class="text-white">Smart Contract Address:</label>
+                <div class="form-group">
+                  <input
+                    type=""
+                    name=""
+                    class="form-control"
+                    placeholder=" HSGSJMDNSHDNDKK98777DKDU... "
+                  />
+                </div>
+
+                <button class="btn float-right">Copy</button>
+                <button class="btn float-right mr-3">Scan</button>
+              </div>
+
+              <!-- end of the form -->
+            </div>
+          </div>
+        </div>
+        <!-- DASHBOARD COLUMN -->
+        <div class="col-lg-9 col-12 desktop-9">
+          <div class="row tbOneHeader">
+            <div class="col-12 clearfix p-5">
+              <a class="navbar-brand" href="index.html">
+                <img src="./images/logo.png" alt="Teazers logo"
+              /></a>
+              <a
+                class="navbar-brand float-right"
+                style="color: #2b4d66; font-weight: 500"
+                href="# "
+              >
+                Sign Out
+                <img src="./Image/powerBtn.png" class="ml-2" alt="Teazers logo"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="row justify-content-md-around colOne mt-3 px-2 px-md-0"
+            style=""
+          >
+            <div class="col-12 col-md-5 colOneRowBg rounded-lg px-4 py-4">
+              <h6 class="" style="color: #b7b6b6">Balance:</h6>
+              <div class="row text-white">
+                <div class="col-4" id = "balance-1"></div>
+                <div class="col-5" style="text-align: right" id = "balanceInUsd-1"></div>
+                <div class="col-3" style="text-align: right; color: #ffa903">
+                  X3
+                </div>
+              </div>
+              <hr style="background: white; border: 1px solid white" />
+              <div class="row text-white">
+                <div class="col-4" id = "balance-2"></div>
+                <div class="col-5" style="text-align: right" id = "balanceInUsd-2"></div>
+                <div class="col-3" style="text-align: right; color: #ffa903">
+                  X4
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-md-5 colOneRowBg rounded-lg px-4 py-4 mt-2 mt-md-0 clearfix"
+            >
+              <h6 class="float-left" style="color: #b7b6b6">Affiliate link:</h6>
+              <button
+                class="text-white btn float-right mb-5"
+                style="background: #af6fbd"
+              >
+                Copy
+              </button>
+
+              <input
+                type="url"
+                class="form-control py-4"
+                name=""
+                placeholder="http://www.teazers.io/ID25438"
+              />
+            </div>
+          </div>
+          <!--  third row -->
+
+          <div class="row px-2 thirdRow mt-lg-5">
+            <div class="col-12 col-lg-4 mt-5 mt-lg-2 mb-3 pl-0">
+              <img
+                src="./images/logo.png"
+                alt="teazers logo"
+                style="height: 30px"
+              />
+              <span style="color: #5154ef; font-weight: 500"> X3 </span>
+            </div>
+            <div class="media col-6 col-lg-4 px-0 mb-3">
+              <img
+                src="Image/blue.png"
+                alt="blue dot"
+                class="rounded-circle mr-2 mt-1"
+                style="width: 15px"
+              />
+              <div class="media-body" style="font-size: 15px">
+                Partner invited by you
+              </div>
+            </div>
+            <div class="media col-6 col-lg-4 px-0" style="font-size: 15px">
+              <img
+                src="Image/orange.png"
+                alt="blue dot"
+                class="rounded-circle mr-2 mt-1"
+                style="width: 15px"
+              />
+              <div class="media-body">Bottom overflow</div>
+            </div>
+
+            <div class="media col-6 offset-lg-4 col-lg-4 px-0 mb-3">
+              <img
+                src="Image/pink.png"
+                alt="blue dot"
+                class="rounded-circle mr-2 mt-1"
+                style="width: 15px"
+              />
+              <div class="media-body" style="font-size: 15px">
+                Overflow from up
+              </div>
+            </div>
+            <div class="media col-6 col-lg-4 px-0" style="font-size: 15px">
+              <img
+                src="Image/green.png"
+                alt="green dot"
+                class="rounded-circle mr-2 mt-1"
+                style="width: 15px"
+              />
+              <div class="media-body">Patner who is ahead of his inviter</div>
+            </div>
+            <div
+              class="mt-lg-4 mt-4 mx-md-auto"
+              style="overflow-x: auto; white-space: nowrap"
+            >
+              <div
+                class="bg-white pt-4 mr-2 rounded-lg cl-6 px-2 pb-2 firstBox"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #000000;
+                      border-bottom: 2px dashed #000000;
+                      border-top: 2px dashed #000000;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBg btn-block text-white mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      5 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dot mr-3 dotOne"></span>
+                      <span class="dot mr-3"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 8px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f6f1f7"
+                  >
+                    <div class="col-4 px-0">
+                      <img
+                        src="https://res.cloudinary.com/chidiebere/image/upload/v1601039242/o.png"
+                      />
+                      <span class="" style="color: #5154ef">4 </span>
+                    </div>
+                    <div class="col-4 px-0">
+                      <img src="Image/greenWait.png" />
+                      <span style="color: #af6fbd">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      15 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="rounded-lg shadow-lg notif-Up"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                style="
+                  display: none;
+                  width: 17em;
+                  position: fixed;
+                  bottom: 0.6em;
+                  right: 2em;
+                  z-index: 1000;
+                  background: none;
+                "
+              >
+                <div class="bg-white">
+                  <div
+                    class="text-center p-2"
+                    style="background: #9d60ab; color: white"
+                  >
+                    Notifications
+                  </div>
+                  <ul class="list-group text-center">
+                    <li class="list-group-item">ID254 just joined</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                    <li class="list-group-item">.987 Trx paid to ID236</li>
+                  </ul>
+                </div>
+
+                <div
+                  class="notif-poiup"
+                  style="position: relative; z-index: 1000"
+                >
+                  <div
+                    class="notif-bg mx-auto d-flex"
+                    style="
+                      position: relative;
+                      background: #9d60ab;
+                      border-radius: 50%;
+                      height: 50px;
+                      width: 50px;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="Image/downA.png"
+                      class="img-fluid mx-auto d-block align-self-center"
+                      alt="notificaiton bell"
+                      style="width: 50%"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="notif-pois"
+                style="
+                  position: fixed;
+                  bottom: 0.6em;
+                  right: 2em;
+                  z-index: 1000;
+                "
+              >
+                <div
+                  class="notif-bg d-flex"
+                  style="
+                    background: #9d60ab;
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                  "
+                >
+                  <img
+                    src="Image/notifBell.png"
+                    class="img-fluid mx-auto d-block align-self-center"
+                    alt="notificaiton bell"
+                    style="width: 50%"
+                  />
+                  <span
+                    class="d-block"
+                    style="
+                      position: absolute;
+                      left: 1.8em;
+                      top: 0.65em;
+                      border-radius: 50%;
+                      height: 10px;
+                      width: 10px;
+                      background: #ef1425;
+                    "
+                  ></span>
+                </div>
+              </div>
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      30 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg cl-6 mr-2 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      50 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span
+                        class="dotT"
+                        style="z-index: 999; position: relative"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      100 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span
+                        class="dotT"
+                        style="z-index: 999; position: relative"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div style="width: 100%" class="mt-2"></div>
+              <!-- divider -->
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      200 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      400 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      800 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      1000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      1500 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div style="width: 100%" class="mt-2"></div>
+              <!-- divider -->
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      2000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      2500 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 mr-2 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      4000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg mr-2 cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      6000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      8000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div style="width: 100%" class="mt-2"></div>
+              <!-- divider -->
+
+              <div
+                class="bg-white pt-4 pb-3 rounded-lg cl-6 px-2 pb-2"
+                style="display: inline-block"
+              >
+                <div class="row mr-0" style="flex-wrap: nowrap !important">
+                  <div
+                    class="col-11"
+                    style="
+                      margin-left: 20px;
+                      border-left: 2px dashed #c8c4c4;
+                      border-bottom: 2px dashed #c8c4c4;
+                      border-top: 2px dashed #c8c4c4;
+                      border-right: 3px solid white;
+                      border-radius: 11px;
+                    "
+                  >
+                    <button
+                      class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                      style="width: 85%"
+                    >
+                      10 000 Trx
+                    </button>
+
+                    <div
+                      style="
+                        text-align: center;
+                        margin-bottom: -1.9rem !important;
+                      "
+                    >
+                      <div style="height: 47px"></div>
+
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT mr-3"></span>
+                      <span class="dotT"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white col-1"
+                    style="
+                      height: 90px;
+                      border: 2px solid none;
+                      width: 10px;
+                      margin-left: -1.7rem;
+                    "
+                  ></div>
+                </div>
+
+                <div class="col-12">
+                  <div
+                    class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                    style="background-color: #f9e6bb"
+                  >
+                    <span
+                      class="text-justify"
+                      style="color: #ffa903; font-weight: 500"
+                      >BUY NOW</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div style="width: 100%"></div>
+              <!-- divider -->
+            </div>
+          </div>
+          <!-- section of translated circles -->
+          <hr
+            class="hideMobile"
+            style="
+              margin-top: 2em;
+              border: 12px solid white;
+              background-color: white;
+              border: 12px solid white;
+              background-color: white;
+              margin-left: -2rem;
+              margin-right: -2rem;
+            "
+          />
+
+          <div class="row secTwobg mt-5" style="">
+            <div
+              class="col-12 col-lg-3 mt-lg-4 mb-3"
+              style="padding-left: 0.2rem"
+            >
+              <img src="./images/logo.png" class="img-fluid SecTwoTea" />
+              <span style="color: #5154ef; font-weight: 500; font-size: 18px"
+                >X4</span
+              >
+            </div>
+
+            <div class="col-12 col-lg-9" style="">
+              <div class="row justify-content-around">
+                <div class="col-6 pl-2">
+                  <span class="fot"></span>
+                  <span class="secTwoText">Partner invited by you</span>
+                </div>
+                <div class="col-6 pl-2">
+                  <span class="fot" style="background: #ffa903"></span>
+                  <span class="secTwoText"> Bottom overflow</span>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-6 pl-2">
+                  <span class="fot" style="background-color: #ea72ae"></span>
+                  <span class="secTwoText">Overflow from up</span>
+                </div>
+                <div class="col-6 pl-2">
+                  <span class="fot" style="background: #06bc39"></span>
+                  <span class="secTwoText"
+                    >Parner who is ahead of his inviter</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-5 mx-md-auto"
+              style="overflow-x: auto; white-space: nowrap; margin-bottom: 7em"
+            >
+              <div class="d-flex justify-content-lg-around">
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #000000;
+                          border-bottom: 2px dashed #000000;
+                          border-top: 2px dashed #000000;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBg btn-block text-white mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          5 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span class="dot" style="margin-left: 1rem"></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke: black; stroke-width: 2"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke: black; stroke-width: 2"
+                        />
+                      </svg>
+                      <span class="dotSvg"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke: black; stroke-width: 2"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke: black; stroke-width: 2"
+                        />
+                      </svg>
+                      <span class="dotSvg"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f6f1f7"
+                    >
+                      <div class="col-4 px-0">
+                        <img
+                          src="https://res.cloudinary.com/chidiebere/image/upload/v1601039242/o.png"
+                        />
+                        <span class="" style="color: #5154ef">4 </span>
+                      </div>
+                      <div class="col-4 px-0">
+                        <img src="Image/greenWait.png" />
+                        <span style="color: #af6fbd">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          15 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          30 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          50 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          100 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex mt-1 justify-content-lg-around">
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          200 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          400 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          800 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          1000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          1500 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex mt-1 justify-content-lg-around">
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          2000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          2500 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          4000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          6000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          8000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex mt-1 justify-content-lg-start">
+                <div
+                  class="bg-white ml-2 mb-2 rounded-lgD"
+                  style="display: inline-block"
+                >
+                  <div class="pt-4 cl-6 pr-2" style="padding-left: 1em">
+                    <div class="row mr-0" style="flex-wrap: nowrap !important">
+                      <div
+                        class="col-11"
+                        style="
+                          margin-left: 20px;
+                          margin-top: 10px;
+                          border-left: 2px dashed #c8c4c4;
+                          border-bottom: 2px dashed #c8c4c4;
+                          border-top: 2px dashed #c8c4c4;
+                          border-right: 3px solid white;
+                          border-radius: 11px;
+                        "
+                      >
+                        <button
+                          class="btn fourthRowBtnBgW btn-block mx-auto d-block mt-n3"
+                          style="width: 85%; z-index: 2; position: relative"
+                        >
+                          10 000 Trx
+                        </button>
+
+                        <div
+                          class="mb-3"
+                          style="
+                            text-align: center;
+                            margin-bottom: -1.9rem !important;
+                          "
+                        >
+                          <div style="height: 47px"></div>
+
+                          <span
+                            class="dot dotSvgSectionTrans mr-5 ml-n1 dotOne"
+                            style="margin-right: 1.6rem !important"
+                          ></span>
+
+                          <span
+                            class="dot dotSvgSectionTrans"
+                            style="margin-left: 1rem"
+                          ></span>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-white col-1"
+                        style="
+                          height: 94px;
+                          border: 3px solid white;
+                          margin-left: -1.6rem;
+                          position: relative;
+                          left: -10px;
+                        "
+                      ></div>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 0.7em;
+                        top: 0.6em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 2.8em;
+                        top: -0.7em;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 5.3em;
+                        top: -2.1rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="70%"
+                          y1="100%"
+                          x2="100%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvgTwo dotSvgSectionTrans"> </span>
+                    </div>
+                    <div
+                      class=""
+                      style="
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        position: relative;
+                        left: 7.4em;
+                        top: -3.4999rem;
+                      "
+                    >
+                      <svg
+                        style="width: 100%; height: 100%; position: absolute"
+                      >
+                        <line
+                          x1="26%"
+                          y1="100%"
+                          x2="0%"
+                          y2="0"
+                          style="stroke-width: 2"
+                          class="svgbg"
+                        />
+                      </svg>
+                      <span class="dotSvg dotSvgSectionTrans"> </span>
+                    </div>
+                  </div>
+                  <div
+                    class="col-11 mt-n5 mx-auto"
+                    style="margin-bottom: 0.3rem"
+                  >
+                    <div
+                      class="row mt-3 py-2 rounded-lg justify-content-center align-items-center"
+                      style="background-color: #f9e6bb"
+                    >
+                      <span
+                        class="text-justify"
+                        style="color: #ffa903; font-weight: 500"
+                        >BUY NOW</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/dasboard.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script async >
+
+      // glabals
+
+      const viewUserAccountAddress = localStorage.getItem("viewAccountAddress");
+      const viewUserAccountID = localStorage.getItem("viewAccountID");
+
+      if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        // set the provider you want from Web3.providers
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+        console.log("injected",web3)
+      }
+         
+      const contractAddress = "0xFA2E09ba28fb58e97a1ab9f8a39c8Ba425474F4f";
+      const contractABI = [{"constant":false,"inputs":[],"name":"changeContractStatus","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_sponsor","type":"address"}],"name":"registration","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"members","outputs":[{"name":"id","type":"uint256"},{"name":"sponsor","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_matrix","type":"uint256"},{"name":"_level","type":"uint256"}],"name":"purchaseLevel","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"orderId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"memberId","type":"uint32"}],"name":"getAffiliateWallet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"},{"name":"_sponsor","type":"address"},{"name":"_level","type":"uint256"}],"name":"setupAccount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"contractEnabled","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getAffiliateId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"idToMember","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_level","type":"uint256"},{"name":"_levelPrice","type":"uint256"},{"name":"_levelCommission","type":"uint256"},{"name":"_levelFee","type":"uint256"}],"name":"updateLevelCost","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_level","type":"uint256"}],"name":"purchaseBundle","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_levelPrice","type":"uint256"},{"name":"_levelCommission","type":"uint256"},{"name":"_levelFee","type":"uint256"}],"name":"addLevel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"topLevel","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_memberId","type":"uint256"},{"name":"_addr","type":"address"},{"name":"_sponsor","type":"address"},{"name":"_level","type":"uint256"}],"name":"importAccount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"levelCost","outputs":[{"name":"cost","type":"uint256"},{"name":"commission","type":"uint256"},{"name":"fee","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setFeeSystem","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"handleForfeitedBalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"lastId","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"},{"name":"_matrix","type":"uint256"},{"name":"_level","type":"uint256"}],"name":"compLevel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setHolder","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_addr","type":"address"},{"name":"_holder","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"memberId","type":"uint256"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Registration","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Upgrade","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"placement","type":"uint8"},{"indexed":false,"name":"passup","type":"bool"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementT1","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"member","type":"address"},{"indexed":false,"name":"sponsor","type":"address"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"placedUnder","type":"address"},{"indexed":false,"name":"placementSide","type":"uint8"},{"indexed":false,"name":"passup","type":"bool"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementT2","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"fromPosition","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"Cycle","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"reEntryFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"PlacementReEntry","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"payoutFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"FundsPayout","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"member","type":"address"},{"indexed":false,"name":"passupFrom","type":"address"},{"indexed":false,"name":"matrix","type":"uint256"},{"indexed":false,"name":"level","type":"uint256"},{"indexed":false,"name":"orderId","type":"uint256"}],"name":"FundsPassup","type":"event"}];
+
+      var trezzorroContract = new web3.eth.Contract(contractABI, contractAddress);
+      console.log("this is what we need: ", trezzorroContract)
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+      window.onload = async () => {
+
+        if(viewUserAccountAddress && viewUserAccountID) {
+            const balance = await provider.getBalance(viewUserAccountAddress);
+            document.querySelector("#balance-1").innerHTML = Number(ethers.utils.formatEther(balance, 'ether')).toFixed(3) + " trx";
+            document.querySelector("#balance-2").innerHTML = Number(ethers.utils.formatEther(balance, 'ether')).toFixed(3) + " trx";
+            document.querySelector("#idNumber").innerHTML = `ID: ${viewUserAccountID}`;
+            fetch("https://api.etherscan.io/api?module=stats&action=ethprice&apikey=BPPBU4V7U79BM8NESWJ4AXQWM68AQVPQ35").then(res => {
+              return res.json()
+            }).then(data => {
+              const balInUsd = Number(data.result.ethusd * Number(ethers.utils.formatEther(balance, 'ether'))).toFixed(3);
+              document.querySelector("#balanceInUsd-1").innerHTML = `$${balInUsd}`
+              document.querySelector("#balanceInUsd-2").innerHTML = `$${balInUsd}`
+
+            })
+          } else  {
+
+            window.location.href = "/login";
+          }
+
+      }
+      
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,467 @@
+.navbar {
+	background: #000000!important;
+}
+
+/* for login and register page */
+
+ .row.mt-3.py-2.rounded-lg.justify-content-center.align-items-center {
+
+	cursor: pointer!important;
+	
+}
+
+
+.bg-white.pt-4.pb-3.rounded-lg.cl-6.px-2.pb-2, .firstBox, .lastBox{
+	
+	padding-top: 2rem!important;
+}
+.btnD {
+	font-size: 20px;
+}
+.btnD:link{
+	text-decoration: none!important;
+}
+.btnD:hover, a:hover {
+	border:2px solid grey;
+	text-decoration: none!important;
+}
+
+.btnAct{
+	background: rgba(211, 32, 39, 0.72)!important;
+	text-decoration: none;
+}
+
+.navbar {
+	background: #000000!important;
+}
+.loginBgUp {
+	background-image: url(../Image/bg2.png) ;
+  	background-position: top right;
+  	background-repeat: no-repeat;
+    background-size: 300px;
+  
+}
+
+.loginBg {
+	background-image: url(../Image/loginbg.png);
+  	background-position: left bottom;
+  	background-repeat: no-repeat;
+    background-size: auto;
+    height: 550px;
+}
+
+.sign, .reg {
+	margin-top: 4em;
+}
+.reg{
+	display: none;
+}
+
+/* css for dashboard */
+
+.colOneRowBg {
+	background: linear-gradient(90deg, #012845 49.48%, #571466 100%);
+}
+.colOne > .col-12 > .row {
+
+	font-weight: 500;
+font-size: 22px;
+line-height: 141.7%;
+
+}
+
+
+
+.thirdRow{
+background: #F8F4F4;
+}
+.blue {
+width: 40px;
+height: 90px;
+
+
+background: #44B3EF;
+}
+
+.fourthRowBtnBg{
+	background: #AF6FBD;
+	cursor: auto!important;
+
+}
+.fourthRowBtnBgW {
+	background: white;
+	color:#B7B6B6;
+	border: 1.5px solid #C8C4C4;
+	cursor: auto!important;
+
+}
+
+.fourthRow > .col-6{
+	flex: 0 0 57%;
+	max-width:60%;
+	
+}
+
+.dashboard-menu{
+	background: #0A162E;
+}
+
+.formOnecoin{
+	background: #252838;
+
+}
+
+.formOnecoin > .btn {
+	color: #252838;
+	background: #C4C4C4;
+}
+
+.mobileMenuClass{
+	position: relative;
+	top: 0;
+	z-index: 0;
+    right: 0;
+    
+    height: 100%;
+
+}
+
+ /* after mobile/side menu */ 
+.firstTableHeader {
+background: #2B4D66;
+color: #ACA9A9;
+}
+
+.firstTableHeader > .col-4  {
+	padding-right: 0px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+/* end of after mobile/side menu  */
+
+
+/* drop down section  */
+.dropdownSection {
+
+}
+/* end of drop down section  */
+
+.t{
+width: 150%;
+		
+}
+
+.tTwo, .tThree{
+	width: 200%;
+}
+
+.tThree{
+	width: 220%;
+}
+.thead-bg > tr{
+	background: #E4F2FF!important;
+}
+
+.thead-bg > tr > th  {
+	font-weight: 500;
+}
+
+tbody > tr > td {
+	font-weight: 300;
+
+}
+
+.yo > tr > td {
+	font-weight: 300;
+
+}
+tr:nth-child(even) {
+	background-color:#EFEFEF; 
+}
+tr:nth-child(odd) {
+	background-color: white; 
+}
+
+
+.custom-select {
+	background:url("https://res.cloudinary.com/chidiebere/image/upload/v1600009460/llop.png") no-repeat right .0rem center/22px 30px!important;
+	border: 1px solid #607a8c!important;
+	height: 30px;
+	padding: 0rem 1.75rem 0rem .75rem;
+}
+
+.dropdownSection > form > .btn {
+	padding: 0;
+	background: #2B4D66;
+	color: white;
+}
+.underliner {
+	text-decoration: underline;
+	color:white;
+}
+.underlinerNone {
+	text-decoration: none;
+}
+
+.tableTwo > div > .btn {
+	background: #2B4D66;
+	color:white;
+}
+.displayNo {
+	display: none;
+}
+.input-group{
+	z-index:0;
+}
+.dot {
+	height: 27px;
+	width: 27px;
+	border: 2px solid #000000;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: white;
+	position: relative;
+	z-index: 1;
+  }
+  .dotT {
+	height: 27px;
+	width: 27px;
+	border-radius: 50%;
+	display: inline-block;
+	border: 1.5px solid #C8C4C4;
+	background: #FFFFFF;
+	position: relative;
+	z-index: 1;
+  }
+  .dot ,.mr-2  {
+	  
+  }
+
+ .dotOne {
+	background-color: #44B3EF;
+	border: 0px solid #000000;
+
+  }
+
+  .htight {
+	height: 47px;
+	border: 3px solid green;
+  }
+
+  .dotOga {
+	margin-bottom: -1.9rem!important;
+  }
+
+  .fot {
+	height: 16.5px;
+	width: 16.5px;
+	background: #44B3EF;
+	border-radius: 50%;
+	display: inline-block;
+	margin-bottom:-.24rem;
+	margin-right:4px;
+  }
+
+  .b {
+	border:3px solid green;
+}
+.l {
+		border:2px solid purple;
+}
+
+.dotSvg{
+	height: 20px;
+	width: 20px;
+	background: white;
+	margin-top:.8rem;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+	left:-.2rem;
+	border: 2px solid #000000;
+}
+  
+.dotSvgTwo{
+	height: 20px;
+	width: 20px;
+	background: #44B3EF;
+	margin-top:.8rem;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+	left:.2rem;
+}
+
+ .dotSvgSectionTrans {
+	background-color: white;
+	border: 2px solid #B7B6B6;
+
+  }
+  .svgbg {
+	stroke: #B7B6B6;
+  }
+
+.rounded-lgD{
+	border-radius: 12px;
+}
+
+/* for default boxes */
+
+.dropdownSectionD {
+	display: none;
+}
+
+.tbOneDropR {
+	width: 33%;
+}
+
+.tbOneHeader {
+	display: none;
+}
+  @media only screen and (max-width: 989px) {
+	  /* to hide  mobile screen */
+	.hideMobile {
+		display:none;
+	}
+	.hideMobileS {
+		display:block;
+
+	}
+
+
+	.mobileMenuClass{
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		right: 0;
+		width: 17em;
+	}
+}
+.container-fluid, body{
+	background: #F8F4F4;
+}
+.secTwobg {
+	background: #F8F4F4;
+}
+
+.htight {
+		border:3px solid red;
+	  }
+	
+
+.dotOga {
+		margin-bottom: -3rem!important;
+	  }
+.SecTwoTea {
+	width:120px;
+}
+
+.secTwoText {
+	color:#888787;
+	font-size: 15px;
+}
+  }
+
+  .navbarShow {
+	display: block;
+}
+
+.navbarHidee {
+	display: none;
+}
+  /* for desktop size */
+  @media only  screen and (min-width:989px) {	
+	.navbarHide {
+		display: none!important;
+	}
+
+	.userTextDashMenu {
+		font-size:17px;
+	}
+	  
+	.firstTableHeader {
+		border-radius: 8px;
+		font-size: 4px;
+
+		width:100%;
+	}
+
+	.firstTableHeader > .col-sm-3 {
+		font-size:25px;
+		cursor: pointer;
+	}
+
+	.dropdownSectionUpHide  {
+		display: none;
+		
+	}
+.dropdownSectionD {
+	display: block;
+}
+.dropdownSectionD > form > .btn {
+	padding: 0;
+	background: #2B4D66;
+	color: white;
+}
+.tbOneDropR {
+	width: 10%;
+}
+
+.dropdownSectionD > form {
+		width:30%;
+		margin-right: -15px!important;
+		margin-left: -15px!important;
+  }
+  .dropdownSection > div{
+	width:40%;
+}
+.dropdownSection > form {
+	margin-right: -15px!important;
+	margin-left: -15px!important;
+}
+.tbOneHeader {
+    display: block;
+    margin-bottom: -4em;
+    background: white;
+    margin-right: -26px;
+    margin-left: -30px;
+    height: 12em;
+}
+
+.btnDropDesktop {
+	height: 2.41em;
+}
+
+.custom-select {
+	background: url(https://res.cloudinary.com/chidiebere/image/upload/v1600009460/llop.png) no-repeat right .0rem center/29px 34px!important;
+    border: 1px solid #607a8c!important;
+    height: 36px;
+    padding: auto 1.75rem 1rem .75rem;
+}
+
+.col-lg-9, .desktop-9{
+    padding-left: 15px!important;
+    padding-right: 27px!important;
+}
+
+.toallowHrDivider {
+	z-index: 1;
+}
+
+
+}
+
+@media only  screen and (min-width:768px) {	
+
+.col-md-5 {
+    
+    flex: 0 0 48%!important;
+    max-width: 80%!important;
+}
+
+
+
+}
